@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	This page demonstrates a form.
+	-->
+	<head>
+		<meta charset="utf-8"/>
+		<title>Demonstrating HTML forms</title>
+	</head>
+
+	<body>
+		<h1>Turnitin</h1>
+		<form  lang="fi" action="">
+			<div>
+				Name: <input type="text" name="studentname"/>
+			</div>
+			<div>
+				Student id: <input type="text" name="id" pattern="\d{1,5}" title="Only digits"  />
+			</div>
+			<div>
+				Email:
+				<input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required name="email">
+				<!--
+				Make an input named "email"
+				-->
+			</div>
+			<div>
+				Assignment:
+				<input name="assignment">
+				<!--
+				Make an input named "assignment"
+				-->
+
+			</div>
+
+			<div>
+				Code:
+				<textarea name="code">
+				</textarea>
+				<!--
+				Make an input named "code" which is a text area to put student's code into.
+				-->
+
+			</div>
+			<div>
+				Cheat:
+				<input type="checkbox" name="cheat">
+			<!--
+				Make an input named "cheat" which is a check box the student must check.
+			-->
+			</div>
+			<div>
+				Pay:
+				<fieldset>
+<legend>Credit Card</legend>
+<label><input type="radio" name="payment" value="Visa">Visa</label><br>
+<label><input type="radio" name="payment" value="MCard">MasterCard </label>
+<label><input type="radio" name="payment" value="Paypal">Paypal </label>
+</fieldset>
+
+			<!--
+				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
+			-->
+			</div>
+			<div>
+				Score:
+				<select pattern="\d{1,5}" title="Only digits" name="score">
+					<option value="1">1
+					</option>
+					<option value="2">2
+					</option>
+				</select>
+			<!--
+				Make an input named "score" which is a list of choices for the score
+			-->
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate</a>
+	</body>
+</html>
